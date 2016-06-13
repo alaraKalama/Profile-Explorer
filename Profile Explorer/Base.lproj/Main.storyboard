@@ -29,9 +29,8 @@
                                     <segue destination="PVp-mI-tzE" kind="show" id="HUk-2u-GJa"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJl-yo-m9e">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="aJl-yo-m9e">
                                 <rect key="frame" x="166" y="107" width="269" height="87"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="lcB-sG-lby"/>
                                     <constraint firstAttribute="width" constant="269" id="mov-ww-UHq"/>
@@ -187,4 +186,7 @@
             <point key="canvasLocation" x="122" y="483"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="233" height="145"/>
+    </resources>
 </document>
