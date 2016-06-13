@@ -9,6 +9,7 @@
 import UIKit
 
 class User: NSObject {
+    
     var username: String!
     var password: String!
     var imageUrl: String!
@@ -16,7 +17,7 @@ class User: NSObject {
     var lastname: String!
     var customDescription: String!
     
-    init(username: String!, password: String!, firstname: String!, lastname: String!, imageUrl: String, customDescription: String = "This user doesn't have bio yet") {
+    init(username: String!, password: String!, firstname: String!, lastname: String!, imageUrl: String, customDescription: String = "This user doesn't have anything to say") {
         super.init()
         self.firstname = firstname
         self.lastname = lastname

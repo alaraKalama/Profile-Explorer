@@ -12,8 +12,11 @@ class ProfileViewController: UIViewController {
     
     
     @IBOutlet weak var profileImage: UIImageView!
+    
     @IBOutlet weak var fullname: UILabel!
+    
     @IBOutlet weak var customDescription: UITextView!
+    
     @IBOutlet weak var friendsButton: UIButton!
     
     override func viewDidLoad() {
