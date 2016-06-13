@@ -107,6 +107,7 @@
 		266369251D0C2FDD0077A4FA /* Profile Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				26A4F13D1D0EDEF70088CD29 /* API */,
 				266369261D0C2FDD0077A4FA /* AppDelegate.swift */,
 				26E8EAB61D0D86000015C582 /* Model */,
 				26E8EAB71D0D86070015C582 /* View */,
@@ -136,6 +137,13 @@
 				2663694B1D0C2FDD0077A4FA /* Info.plist */,
 			);
 			path = "Profile ExplorerUITests";
+			sourceTree = "<group>";
+		};
+		26A4F13D1D0EDEF70088CD29 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		26E8EAB51D0D85F80015C582 /* Controller */ = {

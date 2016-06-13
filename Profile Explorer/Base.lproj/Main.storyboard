@@ -115,27 +115,33 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fNO-0G-C8r">
-                                <rect key="frame" x="272" y="131" width="57" height="57"/>
+                                <rect key="frame" x="255" y="122" width="91" height="91"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="ZWO-6c-KrP"/>
-                                    <constraint firstAttribute="width" constant="57" id="z3T-tI-FpD"/>
+                                    <constraint firstAttribute="height" constant="91" id="ZWO-6c-KrP"/>
+                                    <constraint firstAttribute="width" constant="91" id="z3T-tI-FpD"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="B4j-jJ-zZ4" firstAttribute="top" secondItem="OJn-iW-xj4" secondAttribute="bottom" constant="50" id="1GR-cP-Qvg"/>
-                            <constraint firstItem="pOF-C1-hm3" firstAttribute="top" secondItem="fNO-0G-C8r" secondAttribute="bottom" constant="40" id="2SQ-jZ-2ce"/>
+                            <constraint firstItem="pOF-C1-hm3" firstAttribute="top" secondItem="fNO-0G-C8r" secondAttribute="bottom" constant="15" id="2SQ-jZ-2ce"/>
                             <constraint firstItem="fNO-0G-C8r" firstAttribute="centerX" secondItem="pOF-C1-hm3" secondAttribute="centerX" id="9aH-Xu-BjR"/>
                             <constraint firstItem="OJn-iW-xj4" firstAttribute="top" secondItem="pOF-C1-hm3" secondAttribute="bottom" constant="16" id="Aeh-5g-0NC"/>
                             <constraint firstItem="OJn-iW-xj4" firstAttribute="centerX" secondItem="Kem-5o-y1L" secondAttribute="centerX" id="DF3-BP-mHB"/>
-                            <constraint firstItem="fNO-0G-C8r" firstAttribute="top" secondItem="ShY-m4-pWX" secondAttribute="bottom" constant="67" id="Fy8-Xn-KxQ"/>
+                            <constraint firstItem="fNO-0G-C8r" firstAttribute="top" secondItem="ShY-m4-pWX" secondAttribute="bottom" constant="58" id="Fy8-Xn-KxQ"/>
                             <constraint firstItem="OJn-iW-xj4" firstAttribute="centerX" secondItem="pOF-C1-hm3" secondAttribute="centerX" id="S72-oD-YTr"/>
                             <constraint firstItem="B4j-jJ-zZ4" firstAttribute="centerX" secondItem="OJn-iW-xj4" secondAttribute="centerX" id="UA5-Dc-PWH"/>
                             <constraint firstItem="X3s-ha-WEf" firstAttribute="top" secondItem="B4j-jJ-zZ4" secondAttribute="bottom" constant="91" id="YVR-MA-Xm4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customDescription" destination="OJn-iW-xj4" id="WKj-mf-U2D"/>
+                        <outlet property="friendsButton" destination="B4j-jJ-zZ4" id="MAL-xG-KsX"/>
+                        <outlet property="fullname" destination="pOF-C1-hm3" id="g5l-Ie-iyr"/>
+                        <outlet property="profileImage" destination="fNO-0G-C8r" id="5Gp-Af-a8P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcU-8J-99I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
