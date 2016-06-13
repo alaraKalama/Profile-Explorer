@@ -1,5 +1,5 @@
 //
-//  PersistencyManager.swift
+//  DownloadManager.swift
 //  Profile Explorer
 //
 //  Created by Bianka on 6/13/16.
@@ -8,13 +8,7 @@
 
 import UIKit
 
-class PersistencyManager: NSObject {
-    
-    func saveImage(image: UIImage, filename: String){
-        let path = NSHomeDirectory().stringByAppendingString("/Documents/\(filename)")
-        let data = UIImagePNGRepresentation(image)
-        data?.writeToFile(path, atomically: true)
-    }
+class DownloadManager: NSObject {
     
     func downloadImage(url: String) -> (UIImage) {
         let aUrl = NSURL(string: url)
@@ -22,6 +16,10 @@ class PersistencyManager: NSObject {
         let image = UIImage(data: data!)
         return image!
     }
-
-
+    
+    func saveImage(image: UIImage, filename: String){
+        let path = NSHomeDirectory().stringByAppendingString("/Documents/\(filename)")
+        let data = UIImagePNGRepresentation(image)
+        data?.writeToFile(path, atomically: true)
+    }
 }

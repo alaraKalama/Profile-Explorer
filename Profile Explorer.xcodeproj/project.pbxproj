@@ -15,8 +15,8 @@
 		2663693F1D0C2FDD0077A4FA /* Profile_ExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2663693E1D0C2FDD0077A4FA /* Profile_ExplorerTests.swift */; };
 		2663694A1D0C2FDD0077A4FA /* Profile_ExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266369491D0C2FDD0077A4FA /* Profile_ExplorerUITests.swift */; };
 		26A4F13F1D0EE6770088CD29 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A4F13E1D0EE6770088CD29 /* Data.swift */; };
-		26A4F1411D0F047C0088CD29 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A4F1401D0F047C0088CD29 /* PersistencyManager.swift */; };
 		26A4F1841D0F15DD0088CD29 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A4F1831D0F15DD0088CD29 /* Validator.swift */; };
+		26A4F1861D0F540D0088CD29 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A4F1851D0F540D0088CD29 /* DownloadManager.swift */; };
 		26E8EAB91D0D86240015C582 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8EAB81D0D86240015C582 /* User.swift */; };
 		26E8EABD1D0D8D4D0015C582 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8EABC1D0D8D4D0015C582 /* LoginViewController.swift */; };
 		26E8EABF1D0D8D5D0015C582 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8EABE1D0D8D5D0015C582 /* ProfileViewController.swift */; };
@@ -55,8 +55,8 @@
 		266369491D0C2FDD0077A4FA /* Profile_ExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_ExplorerUITests.swift; sourceTree = "<group>"; };
 		2663694B1D0C2FDD0077A4FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A4F13E1D0EE6770088CD29 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		26A4F1401D0F047C0088CD29 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		26A4F1831D0F15DD0088CD29 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		26A4F1851D0F540D0088CD29 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		26E8EAB81D0D86240015C582 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		26E8EABC1D0D8D4D0015C582 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		26E8EABE1D0D8D5D0015C582 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -148,8 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				26A4F13E1D0EE6770088CD29 /* Data.swift */,
-				26A4F1401D0F047C0088CD29 /* PersistencyManager.swift */,
 				26A4F1831D0F15DD0088CD29 /* Validator.swift */,
+				26A4F1851D0F540D0088CD29 /* DownloadManager.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -337,10 +337,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E8EABD1D0D8D4D0015C582 /* LoginViewController.swift in Sources */,
+				26A4F1861D0F540D0088CD29 /* DownloadManager.swift in Sources */,
 				26A4F1841D0F15DD0088CD29 /* Validator.swift in Sources */,
 				26E8EAB91D0D86240015C582 /* User.swift in Sources */,
 				2663692F1D0C2FDD0077A4FA /* Profile_Explorer.xcdatamodeld in Sources */,
-				26A4F1411D0F047C0088CD29 /* PersistencyManager.swift in Sources */,
 				26E8EAC31D0D8E000015C582 /* FriendsViewController.swift in Sources */,
 				26E8EABF1D0D8D5D0015C582 /* ProfileViewController.swift in Sources */,
 				266369271D0C2FDD0077A4FA /* AppDelegate.swift in Sources */,

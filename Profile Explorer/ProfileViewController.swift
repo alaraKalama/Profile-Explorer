@@ -10,7 +10,6 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var fullname: UILabel!
@@ -37,8 +36,8 @@ class ProfileViewController: UIViewController {
             self.logout()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-            
         }
+        
         alertController.addAction(OkAction)
         alertController.addAction(cancelAction)
         self.presentViewController(alertController, animated: true) {
@@ -48,6 +47,5 @@ class ProfileViewController: UIViewController {
     func logout() {
         let loginViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Login") as! LoginViewController
         self.navigationController!.pushViewController(loginViewController, animated: false)
-        //self.navigationController?.popToViewController(loginViewController, animated: true)
     }
 }

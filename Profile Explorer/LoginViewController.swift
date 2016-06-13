@@ -21,6 +21,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         self.navigationItem.setHidesBackButton(true, animated: false)
         validator = Validator.init()
+        
+        //uncomment
+        username.text = "bianca"
+        password.text = "master"
+        
         super.viewDidLoad()
     }
     
