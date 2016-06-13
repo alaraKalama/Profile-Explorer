@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     override func viewDidLoad() {
+        self.navigationItem.setHidesBackButton(true, animated: false)
         validator = Validator.init()
         super.viewDidLoad()
     }
@@ -31,9 +32,9 @@ class LoginViewController: UIViewController {
         if !validator.areValidUserCredentials(username.text, password: password.text) {
             let alertController = UIAlertController(title: "Ooops", message: "Looks like you name or password are incorrect", preferredStyle: .Alert)
             
-            let OKAction = UIAlertAction(title: "Try again", style: .Default) { (action) in
+            let OkAction = UIAlertAction(title: "Try again", style: .Default) { (action) in
             }
-            alertController.addAction(OKAction)
+            alertController.addAction(OkAction)
             self.presentViewController(alertController, animated: true) {
             }
         }

@@ -28,4 +28,26 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func logout(sender: AnyObject) {
+        print("logout")
+        let alertController = UIAlertController(title: "Confirm logout?", message: "", preferredStyle: .Alert)
+        
+        let OkAction = UIAlertAction(title: "Log out", style: .Default) { (action) in
+            self.logout()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            
+        }
+        alertController.addAction(OkAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true) {
+        }
+    }
+    
+    func logout() {
+        let loginViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Login") as! LoginViewController
+        self.navigationController!.pushViewController(loginViewController, animated: false)
+        //self.navigationController?.popToViewController(loginViewController, animated: true)
+    }
 }
