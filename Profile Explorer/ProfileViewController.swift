@@ -10,6 +10,12 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    private var data: Data!
+    
+    private var user: User!
+    
+    private var downloadManager: DownloadManager!
+    
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var fullname: UILabel!
@@ -20,8 +26,16 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(true, animated: false)
+        data = Data.init()
+        user = data.getUser()
         profileImage.layer.cornerRadius = profileImage.frame.size.width/2
+        profileImage.clipsToBounds = true
+        downloadManager = DownloadManager.init()
+        downloadManager.downloadImage(user.imageUrl, view: self.profileImage)
+        fullname.text = user.fullname
+        customDescription.text = user.customDescription
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        
     }
     
     override func didReceiveMemoryWarning() {

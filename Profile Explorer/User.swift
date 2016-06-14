@@ -15,12 +15,14 @@ class User: NSObject {
     var imageUrl: String!
     var firstname: String!
     var lastname: String!
+    var fullname: String!
     var customDescription: String!
     
     init(username: String!, password: String!, firstname: String!, lastname: String!, imageUrl: String, customDescription: String = "This user doesn't have anything to say") {
         super.init()
         self.firstname = firstname
         self.lastname = lastname
+        self.fullname = firstname + " " + lastname
         self.username = username
         self.password = password
         self.imageUrl = imageUrl
