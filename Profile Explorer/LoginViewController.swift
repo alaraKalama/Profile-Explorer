@@ -20,9 +20,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         self.navigationItem.setHidesBackButton(true, animated: false)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         validator = Validator.init()
         
-        //uncomment
         username.text = "bianca"
         password.text = "master"
         
@@ -31,6 +32,10 @@ class LoginViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func attemptLogin(sender: AnyObject) {
