@@ -167,24 +167,40 @@
         <!--Friends-->
         <scene sceneID="GZs-ar-E04">
             <objects>
-                <tableViewController title="Friends" id="Jfo-zz-X7c" customClass="FriendsViewController" customModule="Profile_Explorer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Friends" id="Jfo-zz-X7c" customClass="ContactsViewController" customModule="Profile_Explorer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vQu-wQ-Gto">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1dZ-wD-j4j">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" id="1dZ-wD-j4j">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1dZ-wD-j4j" id="s7J-uV-mvu">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8S-hg-5FZ">
+                                            <rect key="frame" x="171" y="11" width="0.0" height="0.0"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="578" id="cSS-X3-KEj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="H8S-hg-5FZ" firstAttribute="leading" secondItem="s7J-uV-mvu" secondAttribute="leadingMargin" constant="17" id="0U2-uI-hZK"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="H8S-hg-5FZ" secondAttribute="leading" constant="-17" id="AQP-Ns-6lI"/>
+                                        <constraint firstItem="H8S-hg-5FZ" firstAttribute="centerY" secondItem="s7J-uV-mvu" secondAttribute="centerY" id="hty-dJ-Es7"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Jfo-zz-X7c" id="5E7-ta-l0b"/>
-                            <outlet property="delegate" destination="Jfo-zz-X7c" id="Qhs-uS-MOB"/>
+                            <outlet property="delegate" destination="Jfo-zz-X7c" id="jXU-G0-TbH"/>
                         </connections>
                     </tableView>
                 </tableViewController>

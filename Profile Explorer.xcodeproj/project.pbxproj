@@ -21,6 +21,8 @@
 		26E8EABD1D0D8D4D0015C582 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8EABC1D0D8D4D0015C582 /* LoginViewController.swift */; };
 		26E8EABF1D0D8D5D0015C582 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8EABE1D0D8D5D0015C582 /* ProfileViewController.swift */; };
 		26E8EAC31D0D8E000015C582 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8EAC21D0D8E000015C582 /* FriendsViewController.swift */; };
+		A67E526E1D115FC400E4DF3F /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67E526D1D115FC400E4DF3F /* ContactsViewController.swift */; };
+		A67E52701D11684700E4DF3F /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67E526F1D11684700E4DF3F /* ContactsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		26E8EABC1D0D8D4D0015C582 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		26E8EABE1D0D8D5D0015C582 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		26E8EAC21D0D8E000015C582 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		A67E526D1D115FC400E4DF3F /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		A67E526F1D11684700E4DF3F /* ContactsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 				26A4F13E1D0EE6770088CD29 /* Data.swift */,
 				26A4F1831D0F15DD0088CD29 /* Validator.swift */,
 				26A4F1851D0F540D0088CD29 /* DownloadManager.swift */,
+				A67E526F1D11684700E4DF3F /* ContactsManager.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				26E8EAC21D0D8E000015C582 /* FriendsViewController.swift */,
+				A67E526D1D115FC400E4DF3F /* ContactsViewController.swift */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -345,6 +351,8 @@
 				26E8EABF1D0D8D5D0015C582 /* ProfileViewController.swift in Sources */,
 				266369271D0C2FDD0077A4FA /* AppDelegate.swift in Sources */,
 				26A4F13F1D0EE6770088CD29 /* Data.swift in Sources */,
+				A67E52701D11684700E4DF3F /* ContactsManager.swift in Sources */,
+				A67E526E1D115FC400E4DF3F /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
