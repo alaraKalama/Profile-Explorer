@@ -11,69 +11,58 @@ import Contacts
 
 class FriendsViewController: UITableViewController {
     
-    var objects = [CNContact]()
+    private var contactsManager: ContactsManager!
+    
+    private var names = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getContacts()
-    }
-    
-    func getContacts() {
-        let store = CNContactStore()
-        if CNContactStore.authorizationStatusForEntityType(.Contacts) == .NotDetermined {
-            store.requestAccessForEntityType(.Contacts, completionHandler: { (autorized: Bool, error: NSError?) -> Void in
-                if autorized {
-                    self.retrieveConstactsWithStore(store)
-                }
-            })
-        } else if CNContactStore.authorizationStatusForEntityType(.Contacts) == .Authorized {
-            self.retrieveConstactsWithStore(store)
+        tableView.dataSource = self
+        contactsManager = ContactsManager()
+        let authorized = contactsManager.checkAuthorization()
+        if !authorized {
+            openSettingsAlert()
+        } else {
+            names = contactsManager.getContacts()
         }
     }
     
-    func retrieveConstactsWithStore(store: CNContactStore) {
-        do {
-            let groups = try store.groupsMatchingPredicate(nil)
-            let predicate = CNContact.predicateForContactsInGroupWithIdentifier(groups[0].identifier)
-            let keysToFetch = [CNContactFormatter.descriptorForRequiredKeysForStyle(.FullName), CNContactEmailAddressesKey]
-            let contacts = try store.unifiedContactsMatchingPredicate(predicate, keysToFetch: keysToFetch)
-            self.objects = contacts
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.tableView.reloadData()
-            })
-        } catch {
-            print(error)
-        }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
+    
+    // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        return names.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        
-        let contact = self.objects[indexPath.row]
-        let formatter = CNContactFormatter()
-        
-        cell.textLabel?.text = formatter.stringFromContact(contact)
-        cell.detailTextLabel?.text = contact.emailAddresses.first?.value as? String
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath)
+        cell.textLabel?.text = names[indexPath.item] as? String
         return cell
     }
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return false
+    func openSettingsAlert() {
+        let alertController = UIAlertController(title: "Access denied", message: "You should allow the app to use your contact information from settings", preferredStyle: .Alert)
+        
+        let settingsAction = UIAlertAction(title: "Settings", style: .Default) { (_) -> Void in
+            let settingsUrl = NSURL(string: UIApplicationOpenSettingsURLString)
+            if let url = settingsUrl {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }
+        let OkAction = UIAlertAction(title: "Dissmiss", style: .Destructive) { (action) in
+        }
+        
+        alertController.addAction(settingsAction)
+        alertController.addAction(OkAction)
+        self.presentViewController(alertController, animated: true) {
+        }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
