@@ -24,8 +24,8 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer(tap)
         validator = Validator.init()
         
-        username.text = "bianca"
-        password.text = "master"
+        //username.text = "bianca"
+        //password.text = "master"
         
         super.viewDidLoad()
     }

@@ -20,17 +20,5 @@ class DownloadManager: NSObject {
             }
         }
         task.resume()
-        //saveImage(downloadedImage, filename: "profilePic")
-//        let aUrl = NSURL(string: url)
-//        let data = NSData(contentsOfURL: aUrl!)
-//        let image = UIImage(data: data!)
-//        saveImage(image!, filename: "profilePic")
-//        return image!
-    }
-    
-    func saveImage(image: UIImage, filename: String){
-        let path = NSHomeDirectory().stringByAppendingString("/Documents/\(filename)")
-        let data = UIImagePNGRepresentation(image)
-        data?.writeToFile(path, atomically: true)
     }
 }
