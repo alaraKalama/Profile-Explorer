@@ -59,7 +59,6 @@ class ProfileViewController: UIViewController {
     }
     
     func logout() {
-        let loginViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Login") as! LoginViewController
-        self.navigationController!.pushViewController(loginViewController, animated: false)
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }
