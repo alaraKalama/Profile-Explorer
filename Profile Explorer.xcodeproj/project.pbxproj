@@ -22,6 +22,7 @@
 		26E8EABF1D0D8D5D0015C582 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8EABE1D0D8D5D0015C582 /* ProfileViewController.swift */; };
 		26E8EAC31D0D8E000015C582 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8EAC21D0D8E000015C582 /* FriendsViewController.swift */; };
 		A67E52701D11684700E4DF3F /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67E526F1D11684700E4DF3F /* ContactsManager.swift */; };
+		A6AD78091D198B0400E516D0 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6AD78081D198B0400E516D0 /* logo2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		26E8EABE1D0D8D5D0015C582 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		26E8EAC21D0D8E000015C582 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		A67E526F1D11684700E4DF3F /* ContactsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
+		A6AD78081D198B0400E516D0 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		2663691A1D0C2FDD0077A4FA = {
 			isa = PBXGroup;
 			children = (
+				A6AD78081D198B0400E516D0 /* logo2.png */,
 				266369251D0C2FDD0077A4FA /* Profile Explorer */,
 				2663693D1D0C2FDD0077A4FA /* Profile ExplorerTests */,
 				266369481D0C2FDD0077A4FA /* Profile ExplorerUITests */,
@@ -288,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6AD78091D198B0400E516D0 /* logo2.png in Resources */,
 				266369341D0C2FDD0077A4FA /* LaunchScreen.storyboard in Resources */,
 				266369311D0C2FDD0077A4FA /* Assets.xcassets in Resources */,
 				2663692C1D0C2FDD0077A4FA /* Main.storyboard in Resources */,
